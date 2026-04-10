@@ -17,12 +17,8 @@
     padding: 2rem 1rem 4rem;
   }
 
-  .page {
-    max-width: 680px;
-    margin: 0 auto;
-  }
+  .page { max-width: 680px; margin: 0 auto; }
 
-  /* 헤더 */
   .header {
     background: #1a3a5c;
     border-radius: 20px;
@@ -68,9 +64,7 @@
     position: relative;
     z-index: 1;
   }
-  .header h1 span {
-    color: #63b3ed;
-  }
+  .header h1 span { color: #63b3ed; }
   .header .sub {
     font-size: 13px;
     color: rgba(255,255,255,0.6);
@@ -78,7 +72,6 @@
     z-index: 1;
   }
 
-  /* 요약 카드 */
   .summary-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -104,17 +97,52 @@
     color: #1a202c;
     line-height: 1.4;
   }
-  .summary-card.accent {
-    background: #ebf8ff;
-    border-color: #bee3f8;
-  }
+  .summary-card.accent { background: #ebf8ff; border-color: #bee3f8; }
   .summary-card.accent .value { color: #2b6cb0; }
 
-  /* 섹션 */
+  .link-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 1.2rem;
+  }
+  .link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 0.9rem 1.1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  .link-btn:hover { background: #ebf8ff; border-color: #bee3f8; }
+  .link-btn-left { display: flex; align-items: center; gap: 10px; }
+  .link-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+  .link-icon.blue { background: #ebf8ff; }
+  .link-icon.green { background: #ebf8ff; }
+  .link-icon.teal { background: #e6fffa; }
+  .link-icon.kakao { background: #fef9c3; }
+  .link-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a3a5c;
+    margin-bottom: 2px;
+  }
+  .link-url { font-size: 11px; color: #a0aec0; }
+  .link-arrow { font-size: 16px; color: #cbd5e0; flex-shrink: 0; }
+
   .section {
     background: #fff;
     border-radius: 16px;
-    padding: 1.5rem 1.5rem;
+    padding: 1.5rem;
     margin-bottom: 1.2rem;
     border: 1px solid #e2e8f0;
   }
@@ -137,13 +165,8 @@
     font-size: 14px;
   }
 
-  /* 스텝 */
   .steps { display: flex; flex-direction: column; gap: 12px; }
-  .step {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-  }
+  .step { display: flex; gap: 12px; align-items: flex-start; }
   .step-num {
     flex-shrink: 0;
     width: 28px; height: 28px;
@@ -155,25 +178,10 @@
     display: flex; align-items: center; justify-content: center;
   }
   .step-body { flex: 1; }
-  .step-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 3px;
-  }
-  .step-desc {
-    font-size: 13px;
-    color: #718096;
-    line-height: 1.6;
-  }
-  .step-arrow {
-    text-align: center;
-    color: #cbd5e0;
-    font-size: 18px;
-    margin: -4px 0 -4px 14px;
-  }
+  .step-title { font-size: 14px; font-weight: 700; color: #2d3748; margin-bottom: 3px; }
+  .step-desc { font-size: 13px; color: #718096; line-height: 1.6; }
+  .step-arrow { text-align: center; color: #cbd5e0; font-size: 18px; margin: -4px 0 -4px 14px; }
 
-  /* 필수항목 */
   .items-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -185,60 +193,10 @@
     padding: 0.7rem 0.9rem;
     border: 1px solid #e2e8f0;
   }
-  .item-num {
-    font-size: 10px;
-    font-weight: 700;
-    color: #4299e1;
-    margin-bottom: 2px;
-  }
-  .item-name {
-    font-size: 13px;
-    font-weight: 700;
-    color: #2d3748;
-    margin-bottom: 2px;
-  }
-  .item-hint {
-    font-size: 11px;
-    color: #a0aec0;
-    line-height: 1.4;
-  }
+  .item-num { font-size: 10px; font-weight: 700; color: #4299e1; margin-bottom: 2px; }
+  .item-name { font-size: 13px; font-weight: 700; color: #2d3748; margin-bottom: 2px; }
+  .item-hint { font-size: 11px; color: #a0aec0; line-height: 1.4; }
 
-  /* 후속활동 */
-  .follow-up {
-    background: linear-gradient(135deg, #1a3a5c 0%, #2a5080 100%);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 1.2rem;
-    color: #fff;
-  }
-  .follow-up .fu-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #90cdf4;
-    margin-bottom: 0.4rem;
-  }
-  .follow-up .fu-desc {
-    font-size: 13px;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-  .fu-steps {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-  }
-  .fu-step {
-    background: rgba(255,255,255,0.12);
-    border-radius: 8px;
-    padding: 6px 12px;
-    font-size: 12px;
-    color: #e2e8f0;
-    font-weight: 500;
-  }
-  .fu-step span { color: #63b3ed; font-weight: 700; margin-right: 4px; }
-
-  /* 시상 */
   .award-banner {
     background: #fffbeb;
     border: 1.5px solid #f6d860;
@@ -249,22 +207,29 @@
     gap: 12px;
     margin-bottom: 1.2rem;
   }
-  .award-icon {
-    font-size: 28px;
-    flex-shrink: 0;
+  .award-icon { font-size: 28px; flex-shrink: 0; }
+  .award-text .t1 { font-size: 14px; font-weight: 700; color: #744210; }
+  .award-text .t2 { font-size: 12px; color: #975a16; margin-top: 2px; }
+
+  .follow-up {
+    background: #1a3a5c;
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: #fff;
   }
-  .award-text .t1 {
-    font-size: 14px;
-    font-weight: 700;
-    color: #744210;
-  }
-  .award-text .t2 {
+  .follow-up .fu-title { font-size: 14px; font-weight: 700; color: #90cdf4; margin-bottom: 0.4rem; }
+  .follow-up .fu-desc { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.7; margin-bottom: 1rem; }
+  .fu-steps { display: flex; gap: 6px; flex-wrap: wrap; }
+  .fu-step {
+    background: rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 6px 12px;
     font-size: 12px;
-    color: #975a16;
-    margin-top: 2px;
+    color: #e2e8f0;
+    font-weight: 500;
   }
 
-  /* 주의사항 */
   .notice-list { list-style: none; display: flex; flex-direction: column; gap: 8px; }
   .notice-list li {
     display: flex;
@@ -287,54 +252,6 @@
     margin-top: 2px;
   }
 
-  /* 링크 버튼 */
-  .link-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 1.2rem;
-  }
-  .link-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    border: 1px solid #e2e8f0;
-    border-radius: 12px;
-    padding: 0.9rem 1.1rem;
-    text-decoration: none;
-    color: inherit;
-    transition: background 0.15s;
-  }
-  .link-btn:hover { background: #ebf8ff; border-color: #bee3f8; }
-  .link-btn-left { display: flex; align-items: center; gap: 10px; }
-  .link-icon {
-    width: 36px; height: 36px;
-    border-radius: 10px;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-  .link-icon.blue { background: #ebf8ff; }
-  .link-icon.green { background: #ebf8ff; }
-  .link-icon.kakao { background: #fef9c3; }
-  .link-title {
-    font-size: 14px;
-    font-weight: 700;
-    color: #1a3a5c;
-    margin-bottom: 2px;
-  }
-  .link-url {
-    font-size: 11px;
-    color: #a0aec0;
-  }
-  .link-arrow {
-    font-size: 16px;
-    color: #cbd5e0;
-    flex-shrink: 0;
-  }
-
-  /* 푸터 */
   .footer {
     text-align: center;
     font-size: 12px;
@@ -387,6 +304,16 @@
         <div>
           <div class="link-title">참가 신청</div>
           <div class="link-url">구글폼 바로가기</div>
+        </div>
+      </div>
+      <div class="link-arrow">→</div>
+    </a>
+    <a class="link-btn" href="https://padlet.com/seowongpt1/2026-jxh8j3hndjxdyuno" target="_blank">
+      <div class="link-btn-left">
+        <div class="link-icon teal">📌</div>
+        <div>
+          <div class="link-title">법안 작성 활동 패들렛</div>
+          <div class="link-url">결과물 게시 공간</div>
         </div>
       </div>
       <div class="link-arrow">→</div>
@@ -460,27 +387,27 @@
       </div>
       <div class="item-card">
         <div class="item-num">항목 2</div>
-        <div class="item-name">작품 및 문제 장면</div>
+        <div class="item-name">문학 작품 소개 및 작품 속 문제 장면 설명</div>
         <div class="item-hint">작품명·작가 + 문제 장면 요약</div>
       </div>
       <div class="item-card">
         <div class="item-num">항목 3</div>
-        <div class="item-name">현실 연결</div>
+        <div class="item-name">문학 작품과 현실의 연결</div>
         <div class="item-hint">실제 사례·통계·뉴스 (출처 필수)</div>
       </div>
       <div class="item-card">
         <div class="item-num">항목 4</div>
-        <div class="item-name">핵심 조항</div>
+        <div class="item-name">법안의 핵심 조항</div>
         <div class="item-hint">3~5개 항목, 조문 형식 권장</div>
       </div>
       <div class="item-card">
         <div class="item-num">항목 5</div>
-        <div class="item-name">윤리적 근거</div>
+        <div class="item-name">법안의 윤리적 근거</div>
         <div class="item-hint">윤리 이론 적용해 필요성 논증</div>
       </div>
       <div class="item-card">
         <div class="item-num">항목 6</div>
-        <div class="item-name">기대 효과</div>
+        <div class="item-name">법안의 기대 효과</div>
         <div class="item-hint">법 시행 시 달라지는 점</div>
       </div>
     </div>
@@ -523,9 +450,7 @@
         <div class="item-hint">윤리 이론을 이해하고 적용하여 입법 필요성을 논증했는가</div>
       </div>
     </div>
-    <div style="margin-top:10px; background:#ebf8ff; border-radius:8px; padding:8px 12px; font-size:12px; color:#2b6cb0; font-weight:700; text-align:center;">
-      100점 만점 · 70점 이상 우수작 선발 대상 · 완성도보다 문제의식의 진정성 우선
-    </div>
+    <div style="margin-top: 10px; background: #ebf8ff; border-radius: 8px; padding: 8px 12px; font-size: 12px; color: #2b6cb0; font-weight: bold; text-align: center;">완성도보다 문제의식의 진정성 우선</div>
   </div>
 
   <!-- 후속 활동 -->
@@ -533,10 +458,10 @@
     <div class="fu-title">🎨 우수작 선정 후 — 픽토그램 제작 활동 (희망자)</div>
     <div class="fu-desc">법안 우수작 선정이 끝나면, 내 법안의 핵심 가치를 AI로 픽토그램으로 만들어 학교 공간에 붙이는 후속 활동도 있어요. 희망자에게 별도로 안내할게요!</div>
     <div class="fu-steps">
-      <div class="fu-step"><span>1.</span>핵심 장면 추출</div>
-      <div class="fu-step"><span>2.</span>AI로 프롬프트 생성</div>
-      <div class="fu-step"><span>3.</span>Recraft로 픽토그램 제작</div>
-      <div class="fu-step"><span>4.</span>담당 교사에게 제출</div>
+      <div class="fu-step">1. 핵심 장면 추출</div>
+      <div class="fu-step">2. AI로 프롬프트 생성</div>
+      <div class="fu-step">3. Recraft로 픽토그램 제작</div>
+      <div class="fu-step">4. 담당 교사에게 제출</div>
     </div>
   </div>
 
@@ -544,13 +469,12 @@
   <div class="section">
     <div class="section-title">
       <div class="icon">⚠️</div>
-      이것만 주의하세요
+      주의하세요
     </div>
     <ul class="notice-list">
-      <li>현실 연결 항목에 출처를 꼭 써주세요. 없으면 감점이에요.</li>
-      <li>필수 항목이 빠지면 항목당 3점 감점돼요.</li>
-      <li>AI가 써준 내용을 그대로 올리면 선발에서 제외돼요. AI는 도움 받는 용도로만!</li>
-      <li>같은 모둠에서는 1개만 선발돼요.</li>
+      <li>현실 연결 항목에 출처를 꼭 써주세요.</li>
+      <li>필수 항목이 빠지면 감점돼요.</li>
+      <li>AI가 써준 내용을 그대로 올리면 선발에서 제외돼요.</li>
     </ul>
   </div>
 
