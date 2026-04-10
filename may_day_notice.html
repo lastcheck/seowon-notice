@@ -139,6 +139,16 @@
       animation: bounce 1.4s 1.6s ease-in-out infinite;
     }
 
+    .hero-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      justify-content: center;
+      margin-top: 36px;
+      opacity: 0;
+      animation: fadeUp 0.7s 0.75s forwards;
+    }
+
     /* ── SECTION BASE ── */
     .section {
       max-width: 860px;
@@ -203,6 +213,76 @@
       line-height: 1.75;
       color: #3a3028;
     }
+
+    /* ── VIDEO SECTION ── */
+    .video-section {
+      background: var(--cream);
+      padding: 72px 0;
+    }
+
+    .video-wrap {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      height: 0;
+      overflow: hidden;
+      background: #000;
+      margin-bottom: 48px;
+    }
+    .video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    .summary-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .summary-card {
+      background: #fff;
+      border-left: 4px solid var(--red);
+      padding: 24px 22px;
+    }
+    .summary-card .s-num {
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      color: var(--red);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .summary-card h3 {
+      font-family: 'Noto Serif KR', serif;
+      font-size: 0.97rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      line-height: 1.4;
+    }
+    .summary-card ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+    .summary-card ul li {
+      font-size: 0.83rem;
+      line-height: 1.7;
+      color: #4a4038;
+      padding-left: 14px;
+      position: relative;
+    }
+    .summary-card ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gold);
+      font-size: 0.75rem;
+    }
+    .summary-card ul li strong { color: var(--dark); }
 
     /* ── OVERVIEW STRIP ── */
     .overview-strip {
@@ -391,6 +471,17 @@
 
   <p class="hero-sub">노동절 기념 사회과 학생 참여 전시 · 전교생 자발적 참여</p>
 
+  <div class="hero-btns">
+    <a class="btn btn-primary" href="https://forms.gle/mWkgByoa2EvFdRy47" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2zm-7 14H7v-2h5v2zm5-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+      구글폼 참여하기
+    </a>
+    <a class="btn btn-secondary" href="https://dcu.cbe.go.kr" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93s3.05-7.44 7-7.93v15.86zm2 0V4.07c3.94.49 7 3.85 7 7.93s-3.06 7.44-7 7.93z"/></svg>
+      다채움 플랫폼 접속
+    </a>
+  </div>
+
   <div class="hero-scroll">
     <span>SCROLL</span>
     <div class="arrow"></div>
@@ -419,6 +510,69 @@
         <div class="num">04</div>
         <p>완성된 작품이 복도 게시판에 전시되어 <strong>학교 공동체 전체</strong>와 사회과적 가치를 나눠요.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ━━━ VIDEO ━━━ -->
+<section class="video-section">
+  <div class="section">
+    <p class="section-tag">Background · 노동절을 알다</p>
+    <h2 class="section-title">노동절, 제대로 알고 참여해요</h2>
+
+    <!-- YouTube embed: 28분 06초(1686초)부터 시작 -->
+    <div class="video-wrap">
+      <iframe
+        src="https://www.youtube.com/embed/Vrgj_YU3rLg?start=1686"
+        title="노동절의 유래와 역사"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <!-- 영상 요약 -->
+    <div class="summary-grid">
+
+      <div class="summary-card">
+        <div class="s-num">Summary 01</div>
+        <h3>노동절의 유래:<br>8시간 노동을 향한 투쟁</h3>
+        <ul>
+          <li><strong>1886년 5월 1일</strong>, 시카고 헤이마켓 광장에서 "8시간 노동제"를 요구하는 대규모 시위 발생</li>
+          <li>당시 노동자들은 하루 20시간에 가까운 살인적인 노동에 시달렸고, <strong>"8시간 일하고, 8시간 자고, 8시간 놀자"</strong>는 슬로건은 로버트 오원이 처음 제안</li>
+          <li>시위 도중 의문의 폭탄이 터지고 경찰이 노동 운동가들을 검거해 사형에 처하는 <strong>'사법 살인'</strong> 발생</li>
+          <li>1889년 제2인터내셔널에서 5월 1일을 <strong>세계 노동절</strong>로 제정, 1919년 ILO 1호 협약으로 하루 8시간 노동 확정</li>
+        </ul>
+      </div>
+
+      <div class="summary-card">
+        <div class="s-num">Summary 02</div>
+        <h3>한국은 왜<br>'근로자의 날'이라 부를까?</h3>
+        <ul>
+          <li><strong>'노동'</strong>은 대등한 계약 관계에서의 임금 행위, <strong>'근로'</strong>는 과거 노비가 주인을 위해 부지런히 일한다는 뉘앙스</li>
+          <li>일제강점기부터 노동절 행사가 있었으나, 해방 후 이승만 정부가 북한의 '노동절' 표현을 피하기 위해 명칭을 고민</li>
+          <li><strong>1963년 박정희 정부</strong>에서 법률로 공식 '근로자의 날'로 확정</li>
+        </ul>
+      </div>
+
+      <div class="summary-card">
+        <div class="s-num">Summary 03</div>
+        <h3>세계의<br>노동절 풍경</h3>
+        <ul>
+          <li><strong>프랑스</strong>: 여성 노동자의 희생을 기리며 은방울꽃을 선물하는 전통</li>
+          <li><strong>이탈리아</strong>: 로마에서 성대한 노동자 콘서트 개최</li>
+          <li><strong>미국</strong>: 헤이마켓 사건의 상처를 피해 9월 첫째 주 월요일을 Labor Day로 기념</li>
+        </ul>
+      </div>
+
+      <div class="summary-card">
+        <div class="s-num">Summary 04</div>
+        <h3>깨알 지식</h3>
+        <ul>
+          <li>조난 신호 <strong>'메이데이(Mayday)'</strong>는 5월 1일과 무관 — 프랑스어 "나를 도와주세요(Venez m'aider)"에서 유래</li>
+          <li>8시간 노동은 단순히 일하는 시간을 줄인 것이 아니라, <strong>노동자가 인간다운 삶을 누릴 권리(꽃향기를 맡을 권리)</strong>를 쟁취한 역사적 사건</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
